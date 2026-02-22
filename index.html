@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Proper Arquitetura e Engenheiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">Proper Arquitetura e Engenheiro</div>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Arquitetura Moderna e Funcional</h1>
+        <p>Projetos exclusivos desenvolvidos com elegância e precisão técnica.</p>
+        <a href="#projetos" class="btn">Ver Projetos</a>
+    </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" class="section">
+    <h2>Projetos</h2>
+    <div class="grid">
+
+        <div class="card">
+            <img src="img/casa1.jpeg">
+            <h3>Casa Matola</h3>
+            <p>120m² | 3 Quartos</p>
+            <button onclick="abrirGaleria('Casa Moderna T3','45.000 MT')">Ver Mais</button>
+        </div>
+
+        <div class="card">
+            <img src="img/casa2.jpeg">
+            <h3>Casa Xipamanine</h3>
+            <p>200m² | 4 Quartos</p>
+            <button onclick="abrirGaleria('Casa Duplex Luxo','75.000 MT')">Ver Mais</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="section sobre">
+    <div class="sobre-container">
+        <img src="img/casa2.jpeg" class="foto-dono">
+        <div>
+            <h2>Sobre a Empresa</h2>
+            <p>
+                Proper Arquitetura e Engenheiro é uma empresa unipessoal especializada
+                no desenvolvimento de projetos arquitetônicos modernos,
+                com especialidade de casas, lojas e outros...
+            </p>
+            <p>
+                Fundada e dirigida pelo Arquiteto Principal,
+                com foco em qualidade, inovação e compromisso com cada cliente.
+            </p>
+        </div>
+    </div>
+</section>
+
+l,
+<section id="servicos" class="section">
+    <h2>Serviços</h2>
+    <div class="grid-servicos">
+        <div class="servico">
+            <h3>Projeto Arquitetônico</h3>
+            <p>Desenvolvimento completo de plantas e layouts funcionais.</p>
+        </div>
+        <div class="servico">
+            <h3>Remodelacao de casas</h3>
+            <p>Imagens realistas para visualização do projeto final.</p>
+        </div>
+        <div class="servico">
+            <h3>Construcao e fiscalizacao de obras</h3>
+            <p>Acompanhamento e orientação especializada.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="section contacto">
+    <h2>Contacto</h2>
+    <p>Email: usricsonMachecane@gmail.com</p>
+    <p>Telefone: +258 87 074 5156</p>
+    <a href="https://wa.me/258848173167">WhatsApp</a>
+</section>
+
+<!-- GALERIA MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span onclick="fecharModal()" class="fechar">&times;</span>
+        <h2 id="tituloProjeto"></h2>
+        <p id="precoProjeto"></p>
+        <div class="galeria">
+            <img src="img/casa1.jpeg">
+            <img src="img/casa3.jpeg">
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026  Proper Arquitetura e Engenheiro - Empresa Unipessoal
+    
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

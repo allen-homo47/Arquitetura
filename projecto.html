@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Casa Moderna T3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">Studio Arquitetura</div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+</nav>
+
+<section class="projeto-detalhe">
+    <h1>Casa Moderna T3</h1>
+    <p class="descricao">
+        Projeto moderno ideal para terrenos urbanos.
+        Design minimalista com excelente iluminação natural.
+    </p>
+
+    <h3 class="preco">Preço: 45.000 MT</h3>
+
+    <div class="galeria">
+        <img src="images/casa1.jpg" onclick="abrirImagem(this)">
+        <img src="images/casa2.jpg" onclick="abrirImagem(this)">
+        <img src="images/casa3.jpg" onclick="abrirImagem(this)">
+        <img src="images/casa4.jpg" onclick="abrirImagem(this)">
+    </div>
+</section>
+
+<div id="lightbox" onclick="fecharImagem()">
+    <img id="img-ampliada">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
