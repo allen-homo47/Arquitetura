@@ -2,116 +2,220 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>Proper Arquitetura e Engenheiro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proper Arquitetura e Engenharia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">Proper Arquitetura e Engenheiro</div>
-    <ul>
+<nav class="navbar" id="navbar">
+    <div class="logo">
+        <span class="logo-main">PROPER</span>
+        <span class="logo-sub">Arquitetura & Engenharia</span>
+    </div>
+    <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto</a></li>
     </ul>
+    <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
 </nav>
 
 <!-- HERO -->
 <section id="home" class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1>Arquitetura Moderna e Funcional</h1>
-        <p>Projetos exclusivos desenvolvidos com elegância e precisão técnica.</p>
-        <a href="#projetos" class="btn">Ver Projetos</a>
+        <p class="hero-tag">Empresa Unipessoal · Moçambique</p>
+        <h1>Arquitetura<br><em>que transforma</em><br>espaços</h1>
+        <p class="hero-desc">Projetos exclusivos desenvolvidos com elegância e precisão técnica. Especializados em casas, lojas e muito mais.</p>
+        <div class="hero-actions">
+            <a href="#projetos" class="btn btn-light">Ver Projetos</a>
+            <a href="#contacto" class="btn btn-outline">Fale Connosco</a>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-bar">
+    <div class="stat">
+        <span class="stat-num">+50</span>
+        <span class="stat-label">Projetos Concluídos</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+        <span class="stat-num">5+</span>
+        <span class="stat-label">Anos de Experiência</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+        <span class="stat-num">100%</span>
+        <span class="stat-label">Clientes Satisfeitos</span>
     </div>
 </section>
 
 <!-- PROJETOS -->
 <section id="projetos" class="section">
-    <h2>Projetos</h2>
+    <div class="section-header">
+        <p class="section-tag">Portfólio</p>
+        <h2>Nossos <em>Projetos</em></h2>
+        <p class="section-desc">Cada projeto é uma história única, desenhada com rigor e criatividade.</p>
+    </div>
     <div class="grid">
-
-        <div class="card">
-            <img src="img/casa1.jpeg">
-            <h3>Casa Matola</h3>
-            <p>120m² | 3 Quartos</p>
-            <button onclick="abrirGaleria('Casa Moderna T3','45.000 MT')">Ver Mais</button>
+        <div class="card" data-aos>
+            <div class="card-img-wrapper">
+                <img src="img/casa1.jpeg" alt="Casa Matola">
+                <div class="card-overlay">
+                    <button onclick="abrirGaleria('Casa Matola','45.000 MT')" class="btn-ver">Ver Galeria →</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span>120m²</span>
+                    <span>3 Quartos</span>
+                    <span>Residencial</span>
+                </div>
+                <h3>Casa Matola</h3>
+                <p class="card-price">45.000 MT</p>
+            </div>
         </div>
 
-        <div class="card">
-            <img src="img/casa2.jpeg">
-            <h3>Casa Xipamanine</h3>
-            <p>200m² | 4 Quartos</p>
-            <button onclick="abrirGaleria('Casa Duplex Luxo','75.000 MT')">Ver Mais</button>
+        <div class="card" data-aos>
+            <div class="card-img-wrapper">
+                <img src="img/casa2.jpeg" alt="Casa Xipamanine">
+                <div class="card-overlay">
+                    <button onclick="abrirGaleria('Casa Xipamanine','75.000 MT')" class="btn-ver">Ver Galeria →</button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-meta">
+                    <span>200m²</span>
+                    <span>4 Quartos</span>
+                    <span>Duplex</span>
+                </div>
+                <h3>Casa Xipamanine</h3>
+                <p class="card-price">75.000 MT</p>
+            </div>
         </div>
+    </div>
+</section>
 
+<!-- CAROUSEL -->
+<div class="carousel-section">
+    <div class="carousel-label">Galeria de Inspiração</div>
+    <div class="carousel">
+        <div class="slides">
+            <img src="img/casa1.jpeg" alt="Projeto 1">
+            <img src="img/casa3.jpeg" alt="Projeto 2">
+            <img src="img/casa2.jpeg" alt="Projeto 3">
+            <img src="img/casa1.jpeg" alt="Projeto 4">
+            <img src="img/casa3.jpeg" alt="Projeto 5">
+        </div>
+        <button class="prev" aria-label="Anterior">&#8592;</button>
+        <button class="next" aria-label="Próximo">&#8594;</button>
+    </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="section section-dark">
+    <div class="section-header light">
+        <p class="section-tag">O que fazemos</p>
+        <h2>Nossos <em>Serviços</em></h2>
+    </div>
+    <div class="grid-servicos">
+        <div class="servico" data-aos>
+            <div class="servico-icon">◈</div>
+            <h3>Projeto Arquitetônico</h3>
+            <p>Desenvolvimento completo de plantas, layouts e soluções funcionais adaptadas ao seu espaço e visão.</p>
+        </div>
+        <div class="servico" data-aos>
+            <div class="servico-icon">◇</div>
+            <h3>Remodelação de Casas</h3>
+            <p>Transformamos espaços existentes com novos conceitos, materiais e ambientes renovados.</p>
+        </div>
+        <div class="servico" data-aos>
+            <div class="servico-icon">◉</div>
+            <h3>Construção e Fiscalização</h3>
+            <p>Acompanhamento especializado de obra, garantindo qualidade, prazos e rigor técnico em cada etapa.</p>
+        </div>
     </div>
 </section>
 
 <!-- SOBRE -->
-<section id="sobre" class="section sobre">
-    <div class="sobre-container">
-        <img src="img/casa2.jpeg" class="foto-dono">
-        <div>
-            <h2>Sobre a Empresa</h2>
-            <p>
-                Proper Arquitetura e Engenheiro é uma empresa unipessoal especializada
-                no desenvolvimento de projetos arquitetônicos modernos,
-                com especialidade de casas, lojas e outros...
-            </p>
-            <p>
-                Fundada e dirigida pelo Arquiteto Principal,
-                com foco em qualidade, inovação e compromisso com cada cliente.
-            </p>
-        </div>
+<section id="sobre" class="section sobre-section">
+    <div class="sobre-text" data-aos>
+        <p class="section-tag">Quem somos</p>
+        <h2>Fundada com <em>propósito</em></h2>
+        <p>A <strong>Proper Arquitetura e Engenharia</strong> é uma empresa unipessoal especializada no desenvolvimento de projetos arquitetônicos modernos, com ênfase em casas, lojas e espaços comerciais.</p>
+        <p>Fundada e dirigida pelo Arquiteto Principal, com foco em qualidade, inovação e compromisso total com cada cliente.</p>
+        <a href="#contacto" class="btn btn-dark">Trabalhe Connosco</a>
     </div>
-</section>
-
-l,
-<section id="servicos" class="section">
-    <h2>Serviços</h2>
-    <div class="grid-servicos">
-        <div class="servico">
-            <h3>Projeto Arquitetônico</h3>
-            <p>Desenvolvimento completo de plantas e layouts funcionais.</p>
-        </div>
-        <div class="servico">
-            <h3>Remodelacao de casas</h3>
-            <p>Imagens realistas para visualização do projeto final.</p>
-        </div>
-        <div class="servico">
-            <h3>Construcao e fiscalizacao de obras</h3>
-            <p>Acompanhamento e orientação especializada.</p>
+    <div class="sobre-visual" data-aos>
+        <div class="sobre-img-frame">
+            <img src="img/casa3.jpeg" alt="Projeto de Destaque" class="sobre-img">
+            <div class="sobre-badge">Est. 2020</div>
         </div>
     </div>
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto" class="section contacto">
-    <h2>Contacto</h2>
-    <p>Email: usricsonMachecane@gmail.com</p>
-    <p>Telefone: +258 87 074 5156</p>
-    <a href="https://wa.me/258848173167">WhatsApp</a>
+<section id="contacto" class="section contacto-section">
+    <div class="contacto-inner">
+        <div class="contacto-text">
+            <p class="section-tag light">Entre em contacto</p>
+            <h2>Vamos <em>criar</em><br>juntos</h2>
+            <p>Pronto para transformar o seu espaço? Fale connosco e receba uma proposta personalizada.</p>
+        </div>
+        <div class="contacto-info">
+            <div class="contacto-item">
+                <span class="contacto-icon">✉</span>
+                <div>
+                    <p class="contacto-label">Email</p>
+                    <p>usricsonMachecane@gmail.com</p>
+                </div>
+            </div>
+            <div class="contacto-item">
+                <span class="contacto-icon">☎</span>
+                <div>
+                    <p class="contacto-label">Telefone</p>
+                    <p>+258 87 074 5156</p>
+                </div>
+            </div>
+            <a href="https://wa.me/258848173167" class="btn btn-whatsapp" target="_blank">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Abrir WhatsApp
+            </a>
+        </div>
+    </div>
 </section>
 
-<!-- GALERIA MODAL -->
-<div id="modal" class="modal">
+<!-- MODAL GALERIA -->
+<div id="modal" class="modal" onclick="fecharModalFora(event)">
     <div class="modal-content">
-        <span onclick="fecharModal()" class="fechar">&times;</span>
+        <button onclick="fecharModal()" class="fechar" aria-label="Fechar">&times;</button>
         <h2 id="tituloProjeto"></h2>
-        <p id="precoProjeto"></p>
+        <p id="precoProjeto" class="modal-preco"></p>
         <div class="galeria">
-            <img src="img/casa1.jpeg">
-            <img src="img/casa3.jpeg">
+            <img src="img/casa1.jpeg" alt="Vista 1">
+            <img src="img/casa3.jpeg" alt="Vista 2">
         </div>
     </div>
 </div>
 
 <footer>
-    © 2026  Proper Arquitetura e Engenheiro - Empresa Unipessoal
-    
+    <div class="footer-inner">
+        <div class="footer-logo">PROPER</div>
+        <p>© 2026 Proper Arquitetura e Engenharia · Empresa Unipessoal</p>
+        <p class="footer-sub">Moçambique</p>
+    </div>
 </footer>
 
 <script src="script.js"></script>
