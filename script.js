@@ -82,3 +82,60 @@ aosEls.forEach(el => observer.observe(el));
 function toggleMenu() {
     document.querySelector('.nav-links').classList.toggle('open');
 }
+
+
+let img1 = document.querySelector(".fototm1");
+let img2 = document.querySelector(".fototm2");
+let tm00 = document.querySelector(".tm00");
+let tm01 = document.querySelector(".tm01");
+let tm02 = document.querySelector(".tm02");
+let tm03 = document.querySelector(".tm03");
+let tm04 = document.querySelector(".tm04");
+let tm05 = document.querySelector(".tm05");
+let tm06 = document.querySelector(".tm06");
+
+
+
+ tm00.addEventListener("click", function(){
+img1.src = "img/PHOTO-2026-03-10-10-38-46 2.jpg";
+img2.src = "img/PHOTO-2026-03-10-10-38-47.jpg";
+
+ });
+
+ 
+ tm01.addEventListener("click", function(){
+img1.src = "img/PHOTO-2026-03-10-10-39-00 2.jpg";
+img2.src = "img/PHOTO-2026-03-10-10-39-01 2.jpg";
+
+ });
+
+  tm02.addEventListener("click", function(){
+img1.src = "img/PHOTO-2026-03-10-10-39-00 5.jpg";
+img2.src = "img/PHOTO-2026-03-10-10-39-00 3.jpg";
+
+ });
+
+tm03.addEventListener("click", function(){
+img1.src = "img/PHOTO-2026-03-10-10-38-46 2.jpg";
+img2.src = "img/PHOTO-2026-03-10-10-38-49.jpg";
+
+ });
+
+ tm04.addEventListener("click", function(){
+img1.src = "img/PHOTO-2026-03-10-10-39-01 6.jpg";
+img2.src = "img/PHOTO-2026-03-10-10-39-01 4.jpg";
+
+ });
+
+ 
+ tm05.addEventListener("click", function(){
+img1.src = "img/PHOTO-2026-03-10-10-38-59 2.jpg";
+img2.src = "img/PHOTO-2026-03-10-10-38-53.jpg";
+
+ });
+
+tm06.addEventListener("click", function(){
+img1.src = "img/PHOTO-2026-03-10-10-39-02 2.jpg";
+img2.src = "img/PHOTO-2026-03-10-10-39-02 2.jpg";
+
+ });
